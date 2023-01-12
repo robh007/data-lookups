@@ -1,23 +1,13 @@
-variable "aws_region" {
-  description = "AWS Region"
-  default     = "eu-west-1"
-}
-
-variable "vpc_tags" {
-  description = "Map of tags to find a VPC"
+variable "tags" {
+  description = "Map of tags to find"
   default     = {}
 
   type = map(any)
 }
 
-variable "subnet_tags" {
-  description = "Map of tags for Subnets"
-  default     = {}
+variable "resources" {
+  description = "List of resources to find"
+  default     = []
 
-  type = map(any)
-}
-
-variable "alb_name" {
-  description = "Name of ALB to find"
-  default     = null
+  type = list(string)
 }
