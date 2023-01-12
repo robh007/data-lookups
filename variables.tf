@@ -21,3 +21,10 @@ variable "alb_name" {
   description = "Name of ALB to find"
   default     = null
 }
+
+variable "tag_filter" {
+  description = "Object of tag & filters"
+  default     = {}
+
+  type = map(any)
+}
