@@ -11,3 +11,10 @@ variable "resources" {
 
   type = list(string)
 }
+
+variable "resource_types" {
+  description = "List of resource types to find via resource groups tagging api"
+  default     = []
+
+  type = list(string)
+}

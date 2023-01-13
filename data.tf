@@ -13,10 +13,10 @@ data "aws_subnets" "this" {
   }
 }
 
-data "aws_resourcegroupstaggingapi_resources" "ecs_cluster" {
-  count = contains(var.resources, "ecs_cluster") ? 1 : 0
+data "aws_resourcegroupstaggingapi_resources" "this" {
+  count = length(var.resource_types) > 0 ? 1 : 0
   
-  resource_type_filters = ["ecs:cluster"]
+  resource_type_filters = var.resource_types
   
   dynamic "tag_filter" {
     for_each = var.tags

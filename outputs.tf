@@ -10,6 +10,6 @@ output "alb" {
   value = length(data.aws_alb.this) > 0 ? data.aws_alb.this[0].id : null
 }
 
-output "ecs_cluster" {
-  value = length(data.aws_resourcegroupstaggingapi_resources.ecs_cluster) > 0 ? data.aws_resourcegroupstaggingapi_resources.ecs_cluster[0].resource_tag_mapping_list[0].resource_arn : null
+output "tagged_resources" {
+  value = length(data.aws_resourcegroupstaggingapi_resources.this) > 0 ? flatten(data.aws_resourcegroupstaggingapi_resources.this[*].resource_tag_mapping_list[*].resource_arn) : null
 }
