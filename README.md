@@ -38,8 +38,10 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_alb"></a> [alb](#output\_alb) | n/a |
-| <a name="output_subnets"></a> [subnets](#output\_subnets) | n/a |
-| <a name="output_tagged_resources"></a> [tagged\_resources](#output\_tagged\_resources) | n/a |
-| <a name="output_vpc"></a> [vpc](#output\_vpc) | n/a |
+| <a name="output_alb_arn"></a> [alb\_arn](#output\_alb\_arn) | n/a |
+| <a name="output_alb_listener_arn"></a> [alb\_listener\_arn](#output\_alb\_listener\_arn) | n/a |
+| <a name="output_ecs_cluster_arn"></a> [ecs\_cluster\_arn](#output\_ecs\_cluster\_arn) | n/a |
+| <a name="output_ecs_cluster_name"></a> [ecs\_cluster\_name](#output\_ecs\_cluster\_name) | n/a |
+| <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | n/a |
+| <a name="output_vpc_subnets"></a> [vpc\_subnets](#output\_vpc\_subnets) | n/a |
 <!-- END_TF_DOCS -->
