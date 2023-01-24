@@ -21,3 +21,7 @@ output "alb_arn" {
 output "alb_listener_arn" {
   value = length(data.aws_lb_listener.this) > 0 ? data.aws_lb_listener.this[0].arn : null
 }
+
+output "security_group" {
+  value = length(data.aws_security_group.this) > 0 ? data.aws_security_group.this[0].id : null
+}

@@ -1,5 +1,5 @@
 # data-lookups
-TF data lookups for Core Infrastructure
+TF data lookups for Core Infrastructure. Acceptable values for `resources` are `vpc`, `ecs`, `alb` and `sg`.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
