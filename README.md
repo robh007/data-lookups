@@ -1,6 +1,3 @@
-# data-lookups
-TF data lookups for Core Infrastructure. Acceptable values for `resources` are `vpc`, `ecs`, `alb` and `sg`.
-
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
@@ -42,6 +39,7 @@ No modules.
 | <a name="output_alb_listener_arn"></a> [alb\_listener\_arn](#output\_alb\_listener\_arn) | n/a |
 | <a name="output_ecs_cluster_arn"></a> [ecs\_cluster\_arn](#output\_ecs\_cluster\_arn) | n/a |
 | <a name="output_ecs_cluster_name"></a> [ecs\_cluster\_name](#output\_ecs\_cluster\_name) | n/a |
+| <a name="output_security_group"></a> [security\_group](#output\_security\_group) | n/a |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | n/a |
 | <a name="output_vpc_subnets"></a> [vpc\_subnets](#output\_vpc\_subnets) | n/a |
 <!-- END_TF_DOCS -->
