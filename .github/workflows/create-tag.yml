@@ -12,11 +12,14 @@ jobs:
         with:
           fetch-depth: 0 
       
+      - name: Install semversioner
+        run: pip3 install semversioner
+        
       - name: Major version bump
         if: contains(github.event.pull_request.labels.*.name, 'major')
         run: semversioner add-change --type major --description ${{ github.event.pull_request.title }}
       
-      - name: Major version bump
+      - name: Minor version bump
         if: contains(github.event.pull_request.labels.*.name, 'minor')
         run: semversioner add-change --type minor --description ${{ github.event.pull_request.title }}
 
@@ -31,8 +34,7 @@ jobs:
         run: semversioner changelog > CHANGELOG.md
 
       - name: Whereami
-        run: git status
-
-        
-
+        run: |
+          git status
+          git log
       
