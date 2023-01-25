@@ -17,15 +17,15 @@ jobs:
         
       - name: Major version bump
         if: contains(github.event.pull_request.labels.*.name, 'major')
-        run: semversioner add-change --type major --description ${{ github.event.pull_request.title }}
+        run: semversioner add-change --type major --description "${{ github.event.pull_request.title }}"
       
       - name: Minor version bump
         if: contains(github.event.pull_request.labels.*.name, 'minor')
-        run: semversioner add-change --type minor --description ${{ github.event.pull_request.title }}
+        run: semversioner add-change --type minor --description "${{ github.event.pull_request.title }}"
 
       - name: Patch version bump
         if: contains(github.event.pull_request.labels.*.name, 'patch')
-        run: semversioner add-change --type patch --description ${{ github.event.pull_request.title }}
+        run: semversioner add-change --type patch --description "${{ github.event.pull_request.title }}"
 
       - name: Create release
         run: semversioner release
